@@ -6,28 +6,28 @@ let precioTotal = 0;
 let cantidadTotal = 0;
 
 do {
-  producto = prompt('Queres comprar Shampoo, Acondicionador o Ambos?').toLowerCase();
-  cantidad = parseInt(prompt('Cuántos queres comprar?'));
+    producto = prompt("Elegi un producto: \n Shampoo, \n Acondicionador, \n Jabon").toLowerCase();
+    cantidad = parseInt(prompt("¿Cuantos vas a agregar?"));
 
-  while (isNaN(cantidad) || cantidad <= 0) {
-    alert('Debe agregar una cantidad válida!');
-    cantidad = parseInt(prompt('Cuántos queres comprar?'));
-  };
+while (isNaN(cantidad) || cantidad <= 0) {
+    alert("Debe agregar una cantidad válida!");
+    cantidad = parseInt(prompt("¿Cuantos vas a agregar?"));
+};
 
-  switch(producto) {
-    case 'shampoo':
-      precio = 1000;
-      break;
-    case 'acondicionador':
-      precio = 1500;
-      break;
-    case 'ambos':
-      precio = 2500;
-      break;
-    default:
-      alert('El producto ingresado no es válido!');
-      cantidad = 0;
-  }
+//   switch(producto) {
+//     case 'shampoo':
+//       precio = 1000;
+//       break;
+//     case 'acondicionador':
+//       precio = 1500;
+//       break;
+//     case 'ambos':
+//       precio = 2500;
+//       break;
+//     default:
+//       alert('El producto ingresado no es válido!');
+//       cantidad = 0;
+//   }
 
   precioTotal += precio * cantidad;
   cantidadTotal += cantidad;
